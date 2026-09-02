@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --color-lotus-50: #f5f3ff;
+  --color-lotus-100: #ede9fe;
+  --color-lotus-200: #ddd6fe;
+  --color-lotus-300: #c4b5fd;
+  --color-lotus-400: #a78bfa;
+  --color-lotus-500: #8b5cf6;
+  --color-lotus-600: #7c3aed;
+  --color-lotus-700: #6d28d9;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  @apply antialiased overflow-x-hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl;
+}
+
+.glass-dark {
+  @apply bg-slate-900/60 backdrop-blur-xl border border-white/10 shadow-xl;
+}
+
+.glass-card {
+  @apply rounded-xl sm:rounded-2xl bg-white/70 dark:bg-slate-800/60 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-lg;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-violet-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent;
+}
+
+.btn-primary {
+  @apply px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 active:scale-[0.98] transition-all duration-300 min-h-[44px] inline-flex items-center justify-center;
+}
+
+.btn-secondary {
+  @apply px-5 sm:px-6 py-3 sm:py-3.5 rounded-full border border-violet-400/50 text-violet-600 dark:text-violet-300 font-semibold text-sm sm:text-base hover:bg-violet-500/10 active:scale-[0.98] transition-all duration-300 min-h-[44px] inline-flex items-center justify-center;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-600 focus:ring-2 focus:ring-violet-500 focus:border-transparent outline-none transition-all text-base;
+}
+
+.section-padding {
+  @apply py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full;
+}
+
+.skeleton {
+  @apply animate-pulse bg-slate-200 dark:bg-slate-700 rounded-lg;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-violet-400 rounded-full;
+}
+
+@media (max-width: 640px) {
+  .recharts-wrapper {
+    font-size: 11px !important;
+  }
+}

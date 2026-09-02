@@ -1,0 +1,22 @@
+{
+  "short_name": "YogaCare",
+  "name": "YogaCare AI Yoga Trainer",
+  "description": "Premium AI-powered yoga and wellness coach",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=192&q=80",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=512&q=80",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/dashboard",
+  "background_color": "#0f172a",
+  "theme_color": "#8b5cf6",
+  "display": "standalone",
+  "orientation": "portrait"
+}
